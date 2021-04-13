@@ -1,0 +1,40 @@
+// estilos de las cards y productos
+
+ .gamers{
+    margin-top: 2rem;
+}
+.titulo-gamers{
+    text-align: center;
+}
+.contenedor-cards{
+    margin: 2.5rem auto 0 auto;
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 20px;
+    padding: 10px;
+    width: 25%;
+    height: auto;
+    align-content: center;
+    :hover{
+        cursor: pointer;
+    
+    }
+    
+}
+
+
+.card-body{
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
