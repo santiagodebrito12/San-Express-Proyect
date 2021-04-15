@@ -1,0 +1,55 @@
+// <section id="contacto" class="contacto">
+// <div class="contenedor-newleter">
+//   <div class="contenedor-titulo-contacto">
+//   <h2>NewsLetter</h2>
+// </div>
+// <div class="contenedor-input">
+//   <input type="email" placeholder="Direccion de correo electronico">
+//   <button class="btn btn-secondary"> Submmit </button>
+// </div>
+// </div>
+// </section>
+
+.contacto{
+    background-color: #f8f5f1;
+    width: 100%;
+    min-height: 400px;
+}
+
+.contenedor-newleter{
+    width: 50%;
+    min-height: 350px;
+    margin-top: 30px;
+    float: right;
+    
+    
+    
+}
+.contenedor-titulo-contacto{
+    margin-top: 80px;
+    
+    h2{
+        text-align: center;
+    }
+
+}
+.contenedor-input{
+  
+
+    input{
+        width: 75%;
+        height: 35px;
+        text-decoration: none;
+        
+    }
+   input::placeholder{
+       text-align: center;
+       font-size: 16px;
+   }
+   button{
+       width: 20%;
+   }
+}
+
+
+

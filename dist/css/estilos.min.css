@@ -157,4 +157,40 @@ main .btn:hover {
   align-items: center;
   justify-content: center;
 }
+
+.contacto {
+  background-color: #f8f5f1;
+  width: 100%;
+  min-height: 400px;
+}
+
+.contenedor-newleter {
+  width: 50%;
+  min-height: 350px;
+  margin-top: 30px;
+  float: right;
+}
+
+.contenedor-titulo-contacto {
+  margin-top: 80px;
+}
+
+.contenedor-titulo-contacto h2 {
+  text-align: center;
+}
+
+.contenedor-input input {
+  width: 75%;
+  height: 35px;
+  text-decoration: none;
+}
+
+.contenedor-input input::placeholder {
+  text-align: center;
+  font-size: 16px;
+}
+
+.contenedor-input button {
+  width: 20%;
+}
 /*# sourceMappingURL=estilos.min.css.map */
