@@ -6,95 +6,106 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-/* Estilos del menu de navegacion */
 .contenedor-nav {
-  margin-top: 15px;
   width: 100%;
-  height: 100px;
   display: flex;
-}
-
-.contenedor-logo {
-  width: 25%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .img-logo {
-  margin-left: 5%;
-  width: 60px;
-  height: 60px;
-}
-
-.contenedor-enlaces {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-enlaces {
-  padding: 25px;
-  font-size: 24px;
-  color: black;
-  text-decoration: none;
-}
-
-.nav-enlaces:hover {
-  color: gray;
-  border-bottom: 1px solid grey;
-}
-
-.contenedor-carrito {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  width: 50px;
+  height: 50px;
 }
 
 .img-carrito {
-  margin-right: 5%;
-  width: 60px;
+  width: 50px;
   height: 50px;
-  float: right;
-  cursor: pointer;
 }
 
-.carrito {
-  margin: auto;
-  width: 450px;
-  overflow: hidden;
-  height: 0;
-  transition: 1s all ease;
+div.carrito {
+  display: none;
 }
 
-.open {
-  transition: 1s all ease;
-  height: auto;
-  min-height: 450px;
-  background-color: white;
-  display: block;
-  position: absolute;
-  top: 80px;
-  right: 0;
-  z-index: 1;
-  border: 1px solid grey;
-}
-
-.btn-vaciar-carrito {
-  margin: 20px auto 0 auto;
-}
-
-th {
-  width: 20%;
-  padding: 10px;
-  margin-left: 100px;
+/* Estilos del menu de navegacion */
+@media (min-width: 768px) {
+  .contenedor-nav {
+    margin-top: 15px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+  }
+  .contenedor-logo {
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .img-logo {
+    margin-left: 5%;
+    width: 60px;
+    height: 60px;
+  }
+  .contenedor-enlaces {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-enlaces {
+    padding: 25px;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+  }
+  .nav-enlaces:hover {
+    color: gray;
+    border-bottom: 1px solid grey;
+  }
+  .contenedor-carrito {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .img-carrito {
+    margin-right: 5%;
+    width: 60px;
+    height: 50px;
+    float: right;
+    cursor: pointer;
+  }
+  .carrito {
+    margin: auto;
+    width: 450px;
+    overflow: hidden;
+    height: 0;
+    transition: 1s all ease;
+  }
+  .open {
+    transition: 1s all ease;
+    height: auto;
+    min-height: 450px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 1;
+    border: 1px solid grey;
+  }
+  .btn-vaciar-carrito {
+    margin: 20px auto 0 auto;
+  }
+  th {
+    width: 20%;
+    padding: 10px;
+    margin-left: 100px;
+  }
 }
 
 /* Estilos del titulo */
 main {
   width: 100%;
-  height: 450px;
+  height: 350px;
   background-image: url(../../assets/img/clouds.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -110,6 +121,10 @@ main h1, main h2 {
   padding: 10px;
 }
 
+main h2 {
+  font-size: 24px;
+}
+
 main .btn {
   width: 7rem;
   height: 2.5rem;
@@ -120,6 +135,12 @@ main .btn:hover {
   color: white;
 }
 
+@media (min-width: 768px) {
+  main {
+    height: 450px;
+  }
+}
+
 .gamers {
   margin-top: 2rem;
 }
@@ -128,20 +149,10 @@ main .btn:hover {
   text-align: center;
 }
 
-.contenedor-cards {
-  margin: 2.5rem auto 0 auto;
-  width: 85%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .card {
-  margin: 20px;
-  padding: 10px;
-  width: 25%;
-  height: auto;
+  width: 85%;
+  max-height: 700px;
+  margin: 0.8rem auto 0.8rem auto;
   align-content: center;
 }
 
@@ -151,46 +162,110 @@ main .btn:hover {
 
 .card-body {
   margin-top: 15px;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.contacto {
-  background-color: #f8f5f1;
-  width: 100%;
-  min-height: 400px;
+@media (min-width: 768px) {
+  .contenedor-cards {
+    margin: 2.5rem auto 0 auto;
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 20px;
+    padding: 10px;
+    width: 25%;
+  }
+  .card-body {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.contenedor-newleter {
-  width: 50%;
-  min-height: 350px;
-  margin-top: 30px;
-  float: right;
+@media (max-width: 767px) {
+  footer.contenedor-contacto {
+    background-color: #f8f5f1;
+    width: 100%;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedor-redes {
+    align-content: center;
+    width: 100%;
+  }
+  .contenedor-redes .lista-redes li {
+    margin-left: 8%;
+    padding: 1rem;
+  }
+  .contenedor-newsleter {
+    width: 95%;
+    margin: auto;
+  }
+  .contenedor-newsleter h2 {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .contenedor-newsleter input {
+    width: 65%;
+    height: 35px;
+    text-decoration: none;
+  }
+  .contenedor-newsleter input::placeholder {
+    text-align: center;
+    font-size: 16px;
+  }
+  .contenedor-newsleter button {
+    width: 30%;
+  }
 }
 
-.contenedor-titulo-contacto {
-  margin-top: 80px;
-}
-
-.contenedor-titulo-contacto h2 {
-  text-align: center;
-}
-
-.contenedor-input input {
-  width: 75%;
-  height: 35px;
-  text-decoration: none;
-}
-
-.contenedor-input input::placeholder {
-  text-align: center;
-  font-size: 16px;
-}
-
-.contenedor-input button {
-  width: 20%;
+@media (min-width: 768px) {
+  footer.contenedor-contacto {
+    background-color: #f8f5f1;
+    display: flex;
+    justify-content: space-around;
+    min-height: 400px;
+  }
+  .contenedor-redes {
+    width: 50%;
+    margin: auto;
+  }
+  .contenedor-redes .lista-redes li {
+    margin-left: 8%;
+    padding: 1rem;
+  }
+  .contenedor-newsleter {
+    width: 50%;
+    min-height: 350px;
+    margin-top: 30px;
+  }
+  .contenedor-newsleter h2 {
+    margin-top: 80px;
+  }
+  .contenedor-newsleter input {
+    width: 75%;
+    height: 35px;
+    text-decoration: none;
+  }
+  .contenedor-newsleter input::placeholder {
+    text-align: center;
+    font-size: 16px;
+  }
+  .contenedor-newsleter button {
+    width: 20%;
+  }
 }
 /*# sourceMappingURL=estilos.min.css.map */

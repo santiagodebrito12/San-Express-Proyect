@@ -1,41 +1,71 @@
-// <section id="contacto" class="contacto">
-// <div class="contenedor-newleter">
-//   <div class="contenedor-titulo-contacto">
-//   <h2>NewsLetter</h2>
-// </div>
-// <div class="contenedor-input">
-//   <input type="email" placeholder="Direccion de correo electronico">
-//   <button class="btn btn-secondary"> Submmit </button>
-// </div>
-// </div>
-// </section>
-
-.contacto{
+@media(max-width:767px){
+footer.contenedor-contacto{
     background-color: #f8f5f1;
     width: 100%;
-    min-height: 400px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
-
-.contenedor-newleter{
-    width: 50%;
-    min-height: 350px;
-    margin-top: 30px;
-    float: right;
-    
-    
-    
+.contenedor-redes{
+    align-content: center;
+    width: 100%;
+    .lista-redes{
+        li{
+            margin-left: 8%;
+            padding: 1rem;
+        }
+    }
 }
-.contenedor-titulo-contacto{
-    margin-top: 80px;
-    
+.contenedor-newsleter{
+    width: 95%;
+    margin: auto;
     h2{
+        margin-top: 2rem;
         text-align: center;
+    }
+    input{
+        width: 65%;
+        height: 35px;
+        text-decoration: none;
+        
+    }
+   input::placeholder{
+       text-align: center;
+       font-size: 16px;
+   }
+   button{
+       width: 30%;
+   }
+   
+}
+}
+@media(min-width:768px){
+footer.contenedor-contacto{
+    background-color: #f8f5f1;
+    display: flex;
+    justify-content: space-around;
+    min-height: 400px;
+}  
+
+.contenedor-redes{
+    width: 50%;
+    margin: auto;
+    .lista-redes{
+        li{
+            margin-left: 8%;
+            padding: 1rem;
+        }
     }
 
 }
-.contenedor-input{
-  
-
+.contenedor-newsleter{
+    width: 50%;
+    min-height: 350px;
+    margin-top: 30px;
+    h2{
+        margin-top: 80px;
+    }
     input{
         width: 75%;
         height: 35px;
@@ -49,7 +79,10 @@
    button{
        width: 20%;
    }
+   
 }
+}
+
 
 
 
