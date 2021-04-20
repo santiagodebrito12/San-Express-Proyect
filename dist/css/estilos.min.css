@@ -6,24 +6,52 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.contenedor-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.img-logo {
-  width: 50px;
-  height: 50px;
-}
-
-.img-carrito {
-  width: 50px;
-  height: 50px;
-}
-
-div.carrito {
-  display: none;
+@media (max-width: 767px) {
+  .contenedor-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .img-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .img-carrito {
+    float: right;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .contenedor {
+    width: 33%;
+  }
+  .carrito {
+    margin: auto;
+    width: 90%;
+    overflow: hidden;
+    height: 0;
+    transition: 1s all ease;
+  }
+  .open {
+    transition: 1s all ease;
+    height: auto;
+    min-height: 350px;
+    background-color: white;
+    display: block;
+    position: fixed;
+    left: 5%;
+    top: 80px;
+    z-index: 1;
+    border: 1px solid grey;
+  }
+  .btn-vaciar-carrito {
+    margin: 20px auto 0 auto;
+  }
+  th {
+    width: 20%;
+    padding: 10px;
+    margin-left: 100px;
+  }
 }
 
 /* Estilos del menu de navegacion */
