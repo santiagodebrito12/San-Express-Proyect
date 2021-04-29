@@ -1,7 +1,7 @@
 // Js de apertura del carrito
 
 const imagenCarrito = document.querySelector('.img-carrito');
-const carrito       = document.querySelector('.carrito');
+const carrito       = document.querySelector('#carrito');
 const listaCarrito  = document.querySelector('#lista-carrito');
 const contenedorCarrito = document.querySelector('.contenedor-carrito');
 const contenedorCards= document.querySelector('.contenedor-cards');
@@ -74,16 +74,17 @@ function carritoHTML(articulosCarrito){
     limpiarHTML();
     articulosCarrito.forEach((curso)=>{
         const{imagen,producto,precio,id,cantidad} = curso;
-        const row = document.createElement('tr');
+        const row = document.createElement('div');
+        row.classList.add('row');
         row.innerHTML = `
-        <td><img src="${imagen}" width=100></td>
-        <td>${producto}</td>
-        <td>${precio}</td>
-        <td>${cantidad}</td>
-        <td class="btn btn-danger borrar-curso" data-id="${id}">X</td>
+        <p class="col p-2"><img src="${imagen}" alt="" width="80px" height="80px"></p>
+        <p class="col p-2">${producto}</p>
+        <p class="col p-2">${precio}</p>
+        <p class="col p-2">${cantidad}</p>
+        <p class="btn btn-danger borrar-curso">X</p>
         `;
 
-        tableBody.appendChild(row);
+        carrito.appendChild(row);
     })
 }
 //   Elimina el curso del carrito en el DOM
@@ -101,8 +102,8 @@ function carritoHTML(articulosCarrito){
  }
 
 function limpiarHTML() {
-    while (tableBody.firstChild) {
-        tableBody.removeChild(tableBody.firstChild);
+    while (carrito.firstChild) {
+        carrito.removeChild(carrito.firstChild);
        
     }
 }
